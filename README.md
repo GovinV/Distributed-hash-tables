@@ -4,14 +4,19 @@ Authors: Nicolas VERGNES and Govindaraj VETRIVEL
 
 ## Table of contents
 
-### 	I/ Project's files
-### 	II/ Data exchange format
-#### 		1/ Message's global format
-#### 		2/ Block's format inside Data blocks
-### 	III/ Message's and data block's types
-#### 		1/ Message's types
-#### 		2/ Data block's types
-### 	IV/ More
+    I/ Project's files
+
+    II/ Data exchange format
+
+        1/ Message's global format
+        2/ Block's format inside Data blocks
+
+    III/ Message's and data block's types
+
+        1/ Message's types
+        2/ Data block's types
+        
+    IV/ More
 
 
 ## I/ Project's files 
@@ -46,12 +51,15 @@ Authors: Nicolas VERGNES and Govindaraj VETRIVEL
 +----------+----------+--------------+
 
 TYPE_MSG : 1 bytes for type
+
 SIZE_MSG : 2 bytes for message's size
+
 DATA : SIZE_MSG-3 bytes Data blocks
+
 
 ### 2/ Block's format inside Data blocks
 
-+-----------+-----------+-----------+
++-----------+-----------+----------+
 | TYPE_BLOC | SIZE_BLOC | DATA_BLOC |
 +-----------+-----------+-----------+
 
