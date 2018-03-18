@@ -3,14 +3,15 @@
 Authors: Nicolas VERGNES and Govindaraj VETRIVEL
 
 ## Table of contents
-    ### I/ Project's files
-    ### II/ Data exchange format
-        #### 1/ Message's global format
-        #### 2/ Block's format inside Data blocks
-    ### III/ Message's and data block's types
-        #### 1/ Message's types
-        #### 2/ Data block's types
-    ### IV/ More
+
+### 	I/ Project's files
+### 	II/ Data exchange format
+#### 		1/ Message's global format
+#### 		2/ Block's format inside Data blocks
+### 	III/ Message's and data block's types
+#### 		1/ Message's types
+#### 		2/ Data block's types
+### 	IV/ More
 
 
 ## I/ Project's files 
