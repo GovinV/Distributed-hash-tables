@@ -1,0 +1,83 @@
+.TH  client 1 "December 15, 2017" "Version 1.0" "Manuel de client"
+.SH NAME
+.B client \- pseudo-client torrent
+.SH SYNOPSIS
+.B ./client sraddr srport get hash
+.br
+or
+.br
+.B ./client sraddr srport put hash claddr
+.SH DESCRIPTION
+Pseudo-client Peer to Peer. Peut déclarer un hash (fictif) ou recuperer la liste des IPs qui fournissent ce hash.
+.SH OPTIONS
+Options :
+.TP
+\fBsraddr\fP
+Adresse IP(4 ou 6) du serveur.
+.TP
+\fBsrport\fP
+Port du serveur.
+.TP
+\fBput\fP
+Type du message
+.br
+put = on declare un hash
+.TP
+\fBget\fP
+Type du message
+.br
+get = on demande un hash
+.TP
+\fBhash\fP
+Hash annonce/demande.
+.TP
+\fBcladdr\fP
+Adresse où l'on peut recuperer le hash (avec put).
+.SH RETURN VALUE
+0 si aucun probleme rencontré.
+.SH ERRORS
+.TP
+.B 1
+USAGE
+.TP
+.B 2
+Erreur lors du sendto
+.TP
+.B 3
+Erreur write() lors de l'affichage des IP disponibles.
+.TP
+.B 4
+Erreur write() lors de l'affichage des IP disponibles.
+.TP
+.B 5
+Erreur setsockopt().
+.TP
+.B 50
+Erreur create_message(): malloc() .
+.TP
+.B 51
+Erreur create_message(): malloc() .
+.TP
+.B 52
+Erreur add_date(): taille trop grande.
+.TP
+.B 53
+Erreur create_message(): realloc() .
+.TP
+.B 54
+Erreur recevoir_message(): recvfrom() .
+.TP
+.B 55
+Erreur recevoir_message(): recvfrom() .
+.TP
+.B 56
+Erreur get_addr(): getaddrinfo().
+.TP
+.B 57
+Erreur get_addr(): Aucun resultats du DNS.
+.SH "SEE ALSO"
+server(1)
+.SH LICENCE
+Ce logiciel est soumis a la GNU General Public License.
+.SH AUTHOR
+\fBNicolas VERGNES et Govindaraj VETRIVEL\fP

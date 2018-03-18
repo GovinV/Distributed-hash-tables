@@ -1,0 +1,130 @@
+.TH  server 1 "December 15, 2017" "Version 1.0" "Manuel de server"
+.SH NAME
+.B server \- pseudo-server torrent
+.SH SYNOPSIS
+.B ./server sraddr srport 
+.br
+or
+.br
+.B ./server sraddr srport saddr sport
+.SH DESCRIPTION
+Pseudo-server Peer to Peer. Gere une table de hachage distribuee et permet la connexion entre plusieurs serveurs.
+.SH OPTIONS
+Options :
+.TP
+\fBsraddr\fP
+Adresse IP(4 ou 6) du serveur sur laquelle on ecoute.
+.TP
+\fBsrport\fP
+Port du serveur sur lequel on ecoute.
+.TP
+\fBsaddr\fP
+Adresse IP(4 ou 6) du serveur auquel on veut se connecter.
+.TP
+\fBsport\fP
+Port du serveur auquel on veut se connecter.
+.SH "REPORTING BUGS"
+Ne permet pas la connexion entre Ipv6 et Ipv4.
+.br
+.SH RETURN VALUE
+0 si aucun probleme rencontré.
+.SH ERRORS
+.TP
+.B 1
+Erreur gestion_signaux(): sigemptyset().
+.TP
+.B 2
+Erreur gestion_signaux(): sigaction().
+.TP
+.B 3
+Erreur gestion_signaux(): sigemptyset().
+.TP
+.B 4
+Erreur gestion_signaux(): sigaction().
+.TP
+.B 5
+Erreur server_put(): pas d'addrese IP dans le message.
+.TP
+.B 6
+Erreur server_put(): pas de hash dans le message.
+.TP
+.B 7
+Erreur server_put(): sendto().
+.TP
+.B 8
+Erreur server_get(): pas de hash dans le message.
+.TP
+.B 9
+Erreur server_send_all(): sendto().
+.TP
+.B 10
+Erreur server_send_all(): sendto().
+.TP
+.B 11
+Erreur info_arret_serveur(): sendto().
+.TP
+.B 12
+Erreur check_send_KA(): sendto().
+.TP
+.B 13
+USAGE
+.TP
+.B 14
+Erreur envoie reponse get: sendto().
+.TP
+.B 15
+Erreur envoie reponse keep-alive: sendto().
+.TP
+.B 16
+Erreur connexion à un autre serveur: sendto().
+.TP
+.B 50
+Erreur create_message(): malloc() .
+.TP
+.B 51
+Erreur create_message(): malloc() .
+.TP
+.B 52
+Erreur add_date(): taille trop grande.
+.TP
+.B 53
+Erreur create_message(): realloc() .
+.TP
+.B 54
+Erreur recevoir_message(): recvfrom() .
+.TP
+.B 55
+Erreur recevoir_message(): recvfrom() .
+.TP
+.B 56
+Erreur get_addr(): getaddrinfo().
+.TP
+.B 57
+Erreur get_addr(): Aucun resultats du DNS.
+.TP
+.B 98
+Erreur interruption du programme.
+.TP
+.B 101
+Erreur new_emplacement(): malloc() .
+.TP
+.B 102
+Erreur new_emplacement(): malloc() .
+.TP
+.B 103
+Erreur new_hash(): malloc() .
+.TP
+.B 104
+Erreur new_hash(): malloc() .
+.TP
+.B 105
+Erreur new_a_serveurs(): malloc() .
+.TP
+.B 106
+Erreur new_a_serveurs(): malloc() .
+.SH "SEE ALSO"
+client(1)
+.SH LICENCE
+Ce logiciel est soumis a la GNU General Public License.
+.SH AUTHOR
+\fBNicolas VERGNES et Govindaraj VETRIVEL\fP
