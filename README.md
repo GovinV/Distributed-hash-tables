@@ -46,11 +46,9 @@ Authors: Nicolas VERGNES and Govindaraj VETRIVEL
 
 ### 1/ Message's global format
 
-+----------+----------+--------------+
 
 | TYPE_MSG | SIZE_MSG |     DATA     |
 
-+----------+----------+--------------+
 
 TYPE_MSG : 1 bytes for type
 
@@ -61,11 +59,8 @@ DATA : SIZE_MSG-3 bytes Data blocks
 
 ### 2/ Block's format inside Data blocks
 
-+-----------+-----------+-----------+
 
 | TYPE_BLOC | SIZE_BLOC | DATA_BLOC |
-
-+-----------+-----------+-----------+
 
 
 Add as many time as needed.
